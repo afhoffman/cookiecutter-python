@@ -1,12 +1,10 @@
 """Command-line interface."""
-import click
 
 
-@click.command()
-@click.version_option()
-def main() -> None:
-    """{{cookiecutter.friendly_name}}."""
+def main(prog_name: str) -> None:
+    """Python Project."""
+    print(prog_name)
 
 
 if __name__ == "__main__":
-    main(prog_name="{{cookiecutter.project_name}}")  # pragma: no cover
+    main(prog_name="python-project")  # pragma: no cover
