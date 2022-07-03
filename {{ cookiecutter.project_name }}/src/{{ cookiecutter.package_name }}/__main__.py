@@ -1,10 +1,26 @@
 """Command-line interface."""
 
-
-def main(prog_name: str) -> None:
-    """Python Project."""
-    print(prog_name)
+import typer
 
 
-if __name__ == "__main__":
-    main(prog_name="python-project")  # pragma: no cover
+app = typer.Typer()
+
+
+@app.command("goodbye", help="Say goodbye to the user.")
+def goodbye() -> None:
+    """Say goodbye to the user."""
+    print("Goodbye!")
+
+
+@app.command("hello", help="Greet the user.")
+def hello() -> None:
+    """Greet the user."""
+    print("Hello!")
+
+
+def main() -> None:
+    """{{cookiecutter.friendly_name}}."""
+    app()
+
+
+typer_click_object = typer.main.get_command(app)

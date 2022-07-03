@@ -1,1 +1,4 @@
-"""{{cookiecutter.friendly_name}}."""
+"""{{cookiecutter.friendly_name}}.
+
+This is an example python application.
+"""
