@@ -1,13 +1,13 @@
-"""Test cases for the __main__ module."""
+"""Test cases for the cli module."""
 import pytest
 
-from {{cookiecutter.package_name}} import __main__
+from {{cookiecutter.package_name}} import cli
 
 
 @pytest.fixture
 def runner() -> None:
     """Fixture for invoking command-line interfaces."""
-    __main__.hello()
+    cli.hello()
 
 
 def test_main_succeeds() -> None:
